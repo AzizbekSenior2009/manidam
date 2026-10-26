@@ -1,0 +1,147 @@
+.splash-screen {
+  width: 100%;
+  height: 100vh;
+  min-height: 100%;
+  background-color: #0F2A22;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  user-select: none;
+  cursor: pointer;
+}
+
+/* Gold Confetti Dots */
+.gold-confetti-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.confetti-dot {
+  position: absolute;
+  background: var(--gold);
+  border-radius: 2px;
+  opacity: 0.6;
+  filter: drop-shadow(0 0 4px var(--gold));
+  animation: floatConfetti 3s ease-in-out infinite alternate;
+}
+
+.confetti-dot.c1  { width: 6px; height: 10px; top: 12%; left: 8%; transform: rotate(25deg); }
+.confetti-dot.c2  { width: 8px; height: 14px; top: 22%; left: 14%; transform: rotate(-15deg); }
+.confetti-dot.c3  { width: 5px; height: 8px;  top: 38%; left: 6%; transform: rotate(45deg); }
+.confetti-dot.c4  { width: 7px; height: 12px; top: 58%; left: 12%; transform: rotate(-30deg); }
+.confetti-dot.c5  { width: 8px; height: 15px; top: 78%; left: 9%; transform: rotate(15deg); }
+.confetti-dot.c6  { width: 5px; height: 9px;  top: 90%; left: 15%; transform: rotate(-40deg); }
+
+.confetti-dot.c7  { width: 7px; height: 12px; top: 10%; right: 10%; transform: rotate(-20deg); }
+.confetti-dot.c8  { width: 8px; height: 14px; top: 28%; right: 8%; transform: rotate(35deg); }
+.confetti-dot.c9  { width: 6px; height: 10px; top: 48%; right: 12%; transform: rotate(-10deg); }
+.confetti-dot.c10 { width: 9px; height: 16px; top: 68%; right: 7%; transform: rotate(40deg); }
+.confetti-dot.c11 { width: 5px; height: 8px;  top: 84%; right: 14%; transform: rotate(-25deg); }
+.confetti-dot.c12 { width: 7px; height: 11px; top: 92%; right: 9%; transform: rotate(15deg); }
+
+@keyframes floatConfetti {
+  0% { transform: translateY(0px) rotate(0deg); opacity: 0.5; }
+  100% { transform: translateY(-10px) rotate(20deg); opacity: 0.85; }
+}
+
+/* Center Content */
+.splash-center-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: -40px;
+  z-index: 10;
+}
+
+.splash-logo-container {
+  width: 105px;
+  height: 105px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 8px 24px rgba(212, 175, 55, 0.4));
+  animation: pulseLogo 2s ease-in-out infinite alternate;
+}
+
+@keyframes pulseLogo {
+  0% { transform: scale(0.97); }
+  100% { transform: scale(1.03); }
+}
+
+.splash-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.splash-title {
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
+  margin-top: 4px;
+}
+
+/* Spinner */
+.splash-spinner-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  margin-top: 40px;
+}
+
+.radial-tick-spinner {
+  position: relative;
+  width: 38px;
+  height: 38px;
+  animation: tickSpin 1s steps(12, end) infinite;
+}
+
+.radial-tick-spinner .tick {
+  position: absolute;
+  top: 3px;
+  left: 17px;
+  width: 3.5px;
+  height: 9px;
+  background: var(--gold-light);
+  border-radius: 2px;
+  transform-origin: 2px 16px;
+  opacity: 0.2;
+}
+
+.radial-tick-spinner .t1  { transform: rotate(0deg);   opacity: 1; }
+.radial-tick-spinner .t2  { transform: rotate(30deg);  opacity: 0.9; }
+.radial-tick-spinner .t3  { transform: rotate(60deg);  opacity: 0.8; }
+.radial-tick-spinner .t4  { transform: rotate(90deg);  opacity: 0.7; }
+.radial-tick-spinner .t5  { transform: rotate(120deg); opacity: 0.6; }
+.radial-tick-spinner .t6  { transform: rotate(150deg); opacity: 0.5; }
+.radial-tick-spinner .t7  { transform: rotate(180deg); opacity: 0.4; }
+.radial-tick-spinner .t8  { transform: rotate(210deg); opacity: 0.3; }
+.radial-tick-spinner .t9  { transform: rotate(240deg); opacity: 0.25; }
+.radial-tick-spinner .t10 { transform: rotate(270deg); opacity: 0.2; }
+.radial-tick-spinner .t11 { transform: rotate(300deg); opacity: 0.15; }
+.radial-tick-spinner .t12 { transform: rotate(330deg); opacity: 0.1; }
+
+@keyframes tickSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.splash-loading-text {
+  font-size: 13.5px;
+  color: var(--text-muted);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}

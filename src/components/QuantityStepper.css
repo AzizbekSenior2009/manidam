@@ -1,0 +1,41 @@
+.quantity-stepper {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(15, 38, 30, 0.7);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: var(--radius-pill);
+  padding: 3px 8px;
+  gap: 10px;
+}
+
+.stepper-btn {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text);
+  border-radius: 50%;
+  background: transparent;
+  transition: var(--transition);
+  padding: 0;
+}
+
+.stepper-btn:hover:not(:disabled) {
+  color: var(--gold);
+  background: rgba(212, 175, 55, 0.15);
+}
+
+.stepper-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.stepper-val {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+  min-width: 16px;
+  text-align: center;
+  user-select: none;
+}

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 280" width="100%" height="100%">
+  <defs>
+    <radialGradient id="laganRim" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="85%" stop-color="#edf4f8"/>
+      <stop offset="100%" stop-color="#b0d0e2"/>
+    </radialGradient>
+    <radialGradient id="laganInner" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#145374"/>
+      <stop offset="40%" stop-color="#00334e"/>
+      <stop offset="85%" stop-color="#0b3c5d"/>
+      <stop offset="100%" stop-color="#132735"/>
+    </radialGradient>
+    <filter id="bowlShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Shadow below bowl -->
+  <ellipse cx="200" cy="225" rx="140" ry="20" fill="#05120d" opacity="0.65" />
+
+  <!-- Bowl Group centered vertically around y=135 -->
+  <g filter="url(#bowlShadow)">
+    <!-- Base stand -->
+    <path d="M142,185 Q200,208 258,185 L248,206 Q200,224 152,206 Z" fill="#e2e8ec" stroke="#00334e" stroke-width="2"/>
+    
+    <!-- Outer bowl body profile -->
+    <path d="M40,115 Q200,225 360,115 Q200,165 40,115 Z" fill="url(#laganRim)" stroke="#0f4c75" stroke-width="2.5"/>
+    
+    <!-- Bowl rim top ellipse -->
+    <ellipse cx="200" cy="115" rx="160" ry="52" fill="url(#laganRim)" stroke="#00334e" stroke-width="2.5"/>
+    
+    <!-- Bowl inside hollow cavity -->
+    <ellipse cx="200" cy="119" rx="148" ry="45" fill="url(#laganInner)" stroke="#55e6c1" stroke-width="1.8"/>
+
+    <!-- Traditional Uzbek Ceramic Ornaments (Rishtan motif) -->
+    <!-- Outer rim pattern -->
+    <ellipse cx="200" cy="119" rx="136" ry="40" fill="none" stroke="#f1d675" stroke-width="2" stroke-dasharray="6,4"/>
+    <ellipse cx="200" cy="119" rx="122" ry="34" fill="none" stroke="#25CCF7" stroke-width="1.5"/>
+
+    <!-- Central Uzbek rosette -->
+    <ellipse cx="200" cy="122" rx="72" ry="21" fill="#00203F" stroke="#f1d675" stroke-width="2"/>
+    <circle cx="200" cy="122" r="14" fill="#f1d675"/>
+    <circle cx="200" cy="122" r="7" fill="#00334e"/>
+
+    <!-- Floral petals inside bowl -->
+    <g stroke="#25CCF7" stroke-width="1.5" fill="none">
+      <path d="M160,122 Q200,109 240,122"/>
+      <path d="M160,122 Q200,135 240,122"/>
+      <path d="M180,109 Q200,122 220,109"/>
+      <path d="M180,135 Q200,122 220,135"/>
+      <!-- Paisley motifs (Bodom) -->
+      <path d="M140,120 Q150,114 160,120 Q150,126 140,120 Z" fill="#25CCF7" opacity="0.85"/>
+      <path d="M240,120 Q250,114 260,120 Q250,126 240,120 Z" fill="#25CCF7" opacity="0.85"/>
+      <path d="M190,104 Q200,98 210,104 Q200,110 190,104 Z" fill="#f1d675" opacity="0.85"/>
+      <path d="M190,140 Q200,134 210,140 Q200,146 190,140 Z" fill="#f1d675" opacity="0.85"/>
+    </g>
+
+    <!-- Glossy ceramic reflection highlight -->
+    <path d="M65,112 Q120,84 180,92" stroke="#ffffff" stroke-width="5" stroke-linecap="round" fill="none" opacity="0.5"/>
+  </g>
+</svg>

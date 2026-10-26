@@ -1,0 +1,98 @@
+.category-carousel-section {
+  width: 100%;
+  padding: 4px 0 14px 0;
+  overflow: hidden;
+  flex-shrink: 0;
+  min-height: 85px;
+}
+
+.category-scroll-track {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  overflow-x: auto;
+  padding: 4px 16px 8px 16px;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  cursor: grab;
+}
+
+.category-scroll-track:active {
+  cursor: grabbing;
+}
+
+.category-scroll-track::-webkit-scrollbar {
+  height: 4px;
+  display: block;
+}
+
+.category-scroll-track::-webkit-scrollbar-track {
+  background: rgba(21, 54, 41, 0.5);
+  border-radius: 4px;
+  margin: 0 16px;
+}
+
+.category-scroll-track::-webkit-scrollbar-thumb {
+  background: rgba(212, 175, 55, 0.4);
+  border-radius: 4px;
+}
+
+.category-scroll-track::-webkit-scrollbar-thumb:hover {
+  background: var(--gold);
+}
+
+.category-item-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  flex-shrink: 0;
+  width: 66px;
+  background: transparent;
+  padding: 0;
+  user-select: none;
+}
+
+.category-icon-circle {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #133327;
+  border: 1.5px solid rgba(212, 175, 55, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  transition: var(--transition);
+}
+
+.category-item-btn:hover .category-icon-circle {
+  background: #184232;
+  color: var(--gold-light);
+  border-color: var(--gold);
+}
+
+.category-icon-circle.active-ring {
+  background: #163d2f;
+  color: var(--gold);
+  border: 2px solid var(--gold);
+  box-shadow: 0 0 14px rgba(212, 175, 55, 0.4), inset 0 0 8px rgba(212, 175, 55, 0.2);
+}
+
+.category-label {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-align: center;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 66px;
+  transition: color 200ms ease;
+}
+
+.category-item-btn.active .category-label {
+  color: var(--gold-light);
+  font-weight: 700;
+}

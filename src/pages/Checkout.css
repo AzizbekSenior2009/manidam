@@ -1,0 +1,244 @@
+.checkout-page-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg);
+  position: relative;
+  overflow: hidden;
+}
+
+.checkout-top-bar {
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--bg);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.checkout-page-title {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--gold-light);
+  letter-spacing: 0.3px;
+}
+
+.checkout-form-content {
+  padding: 8px 16px 24px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.checkout-section-card {
+  background: var(--bg-card);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: var(--radius-card);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.checkout-section-title {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.checkout-fields-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.checkout-input {
+  height: 44px;
+  background: #112e23;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: var(--radius-input);
+  padding: 0 14px;
+  color: var(--text);
+  font-size: 13.5px;
+}
+
+.checkout-textarea {
+  background: #112e23;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: var(--radius-input);
+  padding: 12px 14px;
+  color: var(--text);
+  font-size: 13.5px;
+  resize: none;
+}
+
+/* Payment Pills */
+.payment-options-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.payment-method-pill {
+  flex: 1;
+  height: 42px;
+  border-radius: var(--radius-input);
+  background: #112e23;
+  color: var(--text);
+  font-size: 13.5px;
+  font-weight: 600;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.payment-method-pill.selected {
+  border: 1.5px solid var(--gold);
+  background: #173f30;
+  color: var(--gold-light);
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+}
+
+.checkout-error-text {
+  color: var(--danger);
+  font-size: 12px;
+  text-align: center;
+}
+
+.checkout-submit-wrap {
+  margin-top: 6px;
+}
+
+.checkout-submit-btn {
+  height: 48px;
+  font-size: 15px;
+}
+
+/* Success Modal */
+.order-success-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(8, 23, 18, 0.85);
+  backdrop-filter: blur(8px);
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.order-success-card {
+  width: 100%;
+  max-width: 370px;
+  background: var(--bg-card);
+  border: 1.5px solid var(--gold);
+  border-radius: var(--radius-card);
+  padding: 28px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 14px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+}
+
+.success-icon-wrap {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: rgba(212, 175, 55, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.success-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--gold-light);
+}
+
+.success-subtitle {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.success-order-box {
+  width: 100%;
+  background: rgba(15, 42, 34, 0.6);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 12px;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 6px 0;
+}
+
+.success-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  color: var(--text);
+}
+
+.success-home-btn {
+  height: 46px;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.section-title-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.saved-addr-hint {
+  font-size: 11px;
+  color: var(--gold-light, #F5E6B3);
+  opacity: 0.8;
+}
+
+.saved-addr-chips-row {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 2px;
+}
+
+.addr-chip-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 12px;
+  background: rgba(16, 41, 32, 0.7);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: 20px;
+  color: var(--text-muted, #94A3B8);
+  font-size: 11.5px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.addr-chip-btn:hover {
+  border-color: var(--gold, #D4AF37);
+  color: #fff;
+}
+
+.addr-chip-btn.active {
+  background: rgba(212, 175, 55, 0.15);
+  border-color: var(--gold, #D4AF37);
+  color: var(--gold-light, #F5E6B3);
+  font-weight: 700;
+}
+
