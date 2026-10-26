@@ -123,7 +123,7 @@
 
 .admin-modal-sheet {
   width: 100%;
-  max-width: 430px;
+  max-width: min(100%, 480px);
   max-height: 82vh;
   background: var(--bg-card);
   border: 1.5px solid var(--gold-border);

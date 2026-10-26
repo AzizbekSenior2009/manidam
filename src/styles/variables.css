@@ -46,7 +46,7 @@
   --transition-slow: all 300ms ease;
 
   /* Layout */
-  --app-max-width: 430px;
+  --app-max-width: 480px;
   --header-height: 60px;
   --nav-height: 68px;
 }

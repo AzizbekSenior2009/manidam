@@ -11,7 +11,7 @@
 
 .settings-modal-sheet {
   width: 100%;
-  max-width: var(--app-max-width, 430px);
+  max-width: var(--app-max-width, 480px);
   max-height: 85vh;
   background-color: #102920;
   border-top-left-radius: 24px;

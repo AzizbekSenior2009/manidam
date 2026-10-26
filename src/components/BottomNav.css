@@ -1,12 +1,12 @@
 .bottom-nav-bar {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
   width: 100%;
   height: calc(var(--nav-height) + env(safe-area-inset-bottom, 0px));
   padding-bottom: env(safe-area-inset-bottom, 0px);
-  background: rgba(13, 37, 29, 0.95);
+  background: rgba(13, 37, 29, 0.96);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-top: 1px solid rgba(212, 175, 55, 0.25);
@@ -14,6 +14,15 @@
   align-items: center;
   justify-content: center;
   z-index: 90;
+}
+
+@media (min-width: 769px) {
+  .bottom-nav-bar {
+    max-width: 480px;
+    left: 50%;
+    transform: translateX(-50%);
+    right: auto;
+  }
 }
 
 .bottom-nav-items {
